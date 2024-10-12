@@ -1,0 +1,205 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// basic I/O
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int x;
+    
+    cout<<"Enter your age"<<endl;
+    cin>>x;
+    cout<<"Age :-"<<x;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//if else
+//grading system
+#include<iostream>
+using namespace std;
+int main()
+{
+    int marks;
+    cout<<"enter the marks";
+    cin>>marks;
+    if(marks >= 80){
+        cout<<"A";
+    }
+
+    else if(marks >= 60){
+        cout<<"B";
+    }
+
+    else if(marks >= 50){
+        cout<<"C";
+    }
+
+    else if(marks >= 45){
+        cout<<"D";
+    }
+    else if(marks >= 25){
+        cout<<"E";
+    }
+    else if(marks < 25){
+        cout<<"F";
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// switch 
+
+// number to day name
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int day;
+    cout<<"Enter the number :-";
+    cin >> day;
+
+    switch (day)
+    {
+    case 1:
+        cout<<"Monday";
+        break;
+    case 2:
+        cout<<"Tuesday";
+        break;
+    case 3:
+        cout<<"Wednesday";
+        break;
+    case 4:
+        cout<<"Thursday";
+        break;
+    case 5:
+        cout<<"Friday";
+        break;
+    case 6:
+        cout<<"Saturday";
+        break;
+    case 7:
+        cout<<"Sunday";
+        break;    
+    default:
+        cout<<"0 to 7 only";
+        break;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//strings
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    string s="Hello";
+    int x=s.size();
+    cout<<s[0];
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//for loop
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int i;
+
+    for(i=0;i<10;i++)
+    {
+        cout<<"hi"<<endl;
+    }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//while loop
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int i=0;
+    while( i < 10)
+    {
+        cout<<i<<endl;
+        i++;
+    }
+    i=0;
+    do
+    {
+        cout<<i;
+        i++;
+    } while (i<12);
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// fundtions 
+/*
+#include<iostream>
+
+using namespace std;
+
+int sum(int n1, int n2)
+{
+    return n1+n2;
+}
+int main()
+{
+    int n1,n2;
+    cout<<"Enter the 2 numbers :-";
+    cin>>n1;
+    cin>>n2;
+    int res=sum(n1,n2);
+    cout << res;
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// pass by refrene and pass by value 
+
+#include<iostream>
+
+using namespace std;
+
+int sum(int n1, int n2)
+{
+    return n1+n2;
+}
+
+int changevalue(int &n1,int &n2)
+{
+    n1+=100;
+    n2-=100;
+    return n1,n2;
+} 
+
+int main()
+{
+    int n1,n2;
+    cout<<"Enter the 2 numbers :-";
+    cin>>n1>>n2;
+    int res=sum(n1,n2);
+    cout << res << endl;
+    int change=changevalue(n1,n2);
+    cout<<change <<endl;
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
